@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Boxicons-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!--Remixicon-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <!--CSS3-->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/flexbox.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/contato.css">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!--Icons Fa-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Fotojornalismo - Águas Lindas GO</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">FALGO</a>
+
+        <ul class="navlist">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="biografia.html">Quem somos?</a></li>
+            <li><a class="btnOpenModal" onclick="openModal()">Contato</a></li>
+        </ul>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h4>Seja bem vindo!</h4>
+            <h1>Fotojornalismo de Águas Lindas GO</h1>
+            <p>Fique por dentro das informações da cidade de maneira rápida, sem precisar ler materias grandes, apenas visualize nossas fotos e descrições intuitivas sobre os assuntos da cidade.</p>
+            <a href="index.html" id="visualizar">Visualizar</a>
+        </div>
+
+        <div class="hero-img">
+            <img src="img/fotografo.png" alt="img">
+        </div>
+    </section>
+
+    <div class="icons">
+        <!--INSTAGRAM-->
+        <a href="https://www.instagram.com/luizgui.dev/"><i class="ri-instagram-line"></i></a>
+        <!--LINKEDIN-->
+        <a href="https://www.linkedin.com/in/luiz-guilherme-9a1664271/"><i class="ri-linkedin-line"></i></a>
+        <!--GITHUB-->
+        <a href="https://github.com/Guilherme-TI"><i class="ri-github-line"></i></a>
+    </div>
+
+    <div class="scroll-down">
+        <a href="#"><i class="ri-skip-down-fill"></i></a>
+    </div>
+
+    <!--FlexBox-->
+
+    <div class="flexbox">
+        <h2>Notícias</h2>
+        <h3 id="temporizador"></h3>
+        <script src="events/Data.js"></script>
+        <div class="box-container">
+            <div class="box" id="box1"></div>
+            <div class="box" id="box2"></div>
+            <div class="box" id="box3"></div>
+            <div class="box" id="box4"></div>
+        </div>
+
+        <div class="box-container">
+            <div class="box" id="box5"></div>
+            <div class="box" id="box6"></div>
+            <div class="box" id="box7"></div>
+            <div class="box" id="box8"></div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>Desenvolvido por: <a href="https://www.linkedin.com/in/luiz-guilherme-9a1664271/">@Guilherme Lucena</a></p>
+    </div>
+
+
+
+
+    <!--MODAL - FORMULÁRIO DE CONTATO-->
+    <div class="modal-container">
+        <form class="modal" action="https://formsubmit.co/luizguilucena09@gmail.com" method="POST">
+
+            <div id="form_header">
+                <h1>Contato</h1>
+                <a class="btnClose" onclick="closeModal()">Fechar</a>
+            </div>
+
+            <!-- SOCIAL MEDIA LINKS -->
+            <div id="social_media">
+                <!-- INSTRAGRAM -->
+                <a href="https://www.instagram.com/luizgui.dev/">
+                    <i class="ri-instagram-line"></i>
+                </a>
+
+                <!-- LINKEDIN -->
+                <a href="https://www.linkedin.com/in/luiz-guilherme-9a1664271/">
+                    <i class="ri-linkedin-line"></i>
+                </a>
+                
+                <!-- GITHUB -->
+                <a href="https://github.com/Guilherme-TI">
+                    <i class="ri-github-line"></i>
+                </a>
+            </div>
+
+            <!-- INPUTS -->
+            <div id="inputs">
+                <!-- NAME -->
+                <div class="input-box">
+                    <label for="name">
+                        Nome
+                        <div class="input-field">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                    </label>
+                </div>
+                
+                <!-- EMAIL -->
+                <div class="input-box">
+                    <label for="email">
+                        E-mail
+                        <div class="input-field">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </label>
+                </div>
+                
+                <!-- MENSAGEM -->
+                <div class="input-box">
+                    <label for="mensagem">
+                        Mensagem
+                            <textarea name="message" id="" cols="30" rows="5" required></textarea>
+                    </label>
+                </div>
+
+            <!-- ENVIAR MENSAGEM -->
+            <button type="submit" id="contato_button">
+                Enviar
+            </button>
+
+            </div>
+
+        </form>
+      </div>
+
+    <!--Chamando função de JS-->
+    <script src="events/Menu.js"></script>
+    <script src="./events/Contato.js"></script>
+
+</body>
+</html>

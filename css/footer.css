@@ -1,0 +1,11 @@
+.footer{
+    background: linear-gradient(to right, #000000, #130F40);
+    height: 10vh;
+}
+.footer p{
+    text-align: center;
+    color: white;
+}
+.footer p a{
+    color: #837eb4;
+}
