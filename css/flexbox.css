@@ -1,6 +1,3 @@
-.flexbox{
-    background: linear-gradient(to right, #000000, #130F40);
-}
 .flexbox h2 {
     color: white;
     font-size: 40px;
@@ -19,7 +16,6 @@
 }
 .flexbox h3{
     color: white;
-    text-align: center;
 }
 .box-container{
     position: relative;
@@ -29,42 +25,59 @@
     flex-direction: row;
     justify-content: space-around;
     flex-flow: wrap;
+    margin-top: 2rem;
 }
 .box{
-    width: 20%;
+    width: 100%;
     height: 300px;
-    margin: 20px;
     box-sizing: border-box;
     font-size: 50px;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
+fieldset{
+    width: 20%;
+    color: white;
+    gap: 2rem;
+    border: 1px solid transparent;
+}
+
+fieldset h3{
+    margin-top: 0.5em;
+}
+
+fieldset p{
+    margin-top: 0.5em;
+}
+#temporizador{
+    text-align: center;
+}
 /*IMAGEM DE FUNDO DE CADA DIV*/
 
-#box1{
-    background-image: url("../img/noticias/olavo.jpeg");
-}
-#box2{
-    background-image: url("../img/noticias/viatura.jpeg");
-}
-#box3{
-    background-image: url("../img/noticias/tutela.jpeg");
-}
-#box4{
+#box8{
     background-image: url("../img/noticias/fabio.jpeg");
-}
-#box5{
-    background-image: url("../img/noticias/querencia.jpg");
-}
-#box6{
-    background-image: url("../img/noticias/ano-novo.png");
 }
 #box7{
     background-image: url("../img/noticias/limpeza-aguas-lindas.jpeg");
 }
-#box8{
+#box6{
+    background-image: url("../img/noticias/querencia.jpg");
+}
+#box5{
+    background-image: url("../img/noticias/ano-novo.png");
+}
+#box4{
     background-image: url("../img/noticias/olavo.jpeg");
+}
+#box3{
+    background-image: url("../img/noticias/nova_samu.jpeg");
+}
+#box2{
+    background-image: url("../img/noticias/viatura.jpeg");
+}
+#box1{
+    background-image: url("../img/noticias/tutela.jpeg");
 }
 
 .box:hover{
@@ -72,12 +85,14 @@
     opacity: 0.6;
 }
 @media screen and (max-width: 1200px) {
-    .box{
+    fieldset{
         width: 40%;
+        margin-top: 1.5rem;
     }
 }
 @media screen and (max-width: 600px) {
-    .box{
+    fieldset{
         width: 90%;
+        margin-top: 1.5rem;
     }
 }
